@@ -1,0 +1,22 @@
+{
+  "name": "gulp-default-starter",
+  "version": "1.0.0",
+  "author": "Bartek Cis",
+  "description": "Simple configuration for your Gulp project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartcis/gulp-4.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bartcis/gulp-4/issues"
+  },
+  "homepage": "https://github.com/bartcis/gulp-4#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
