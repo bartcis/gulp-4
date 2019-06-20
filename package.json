@@ -18,5 +18,8 @@
   "homepage": "https://github.com/bartcis/gulp-4#readme",
   "devDependencies": {
     "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7"
   }
 }
