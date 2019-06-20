@@ -1,5 +1,7 @@
 const { watch, src, dest, series, parallel } = require('gulp');
 const browserSync = require('browser-sync').create();
+const babel = require('gulp-babel');
+const rename = require('gulp-rename');
 
 // const gulpif = require('gulp-if');
 // const uglify = require('gulp-uglify');
@@ -7,7 +9,9 @@ const browserSync = require('browser-sync').create();
 const config = {
     app: {
         js: [
-            './src/scripts/**/*.js'
+            './node_modules/babel-polyfill/dist/polyfill.js',
+            './src/scripts/*.js',
+            './src/vendors/*.js'
         ],
         scss: './src/styles/**/*.scss',
         fonts: './src/fonts/*',
@@ -21,7 +25,13 @@ const config = {
     }
 }
 
-function jsTask() { }
+function jsTask() {
+    src(config.app.js)
+        .pipe(babel())
+        .pipe(dest(config.dist.base))
+        .pipe(rename({ extname: '.bundle.js' }))
+        .pipe(dest(config.dist.base));
+}
 
 function cssTask() { }
 
