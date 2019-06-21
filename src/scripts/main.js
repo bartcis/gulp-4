@@ -1,5 +1,9 @@
-import SomeModule from './modules/RestrictedButton';
+class SomeClass {
+    method() {
+        console.log('I\'m here!');
+    }
+}
 
-const app = new SomeModule();
+const test = new SomeClass;
 
-app();
+test.method();
