@@ -24,11 +24,7 @@ const config = {
         base: './dist/',
         fonts: './dist/fonts',
         images: './dist/images'
-    },
-    extraBundles: [
-        './dist/main.js',
-        './dist/main.css'
-    ]
+    }
 }
 
 function jsTask(done) {
